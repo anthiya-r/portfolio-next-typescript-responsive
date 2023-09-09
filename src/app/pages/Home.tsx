@@ -1,3 +1,16 @@
+"use client";
+import Navbar from "../components/Navbar";
+import About from "../components/About";
+
 export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <Navbar />
+      <About />
+      <h1>
+        {" "}
+        <button>Hello Wolrd!</button>
+      </h1>
+    </>
+  );
 }

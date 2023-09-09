@@ -1,8 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "~mdb-ui-kit/css/mdb.min.css";
 
 * {
   width: 100%;
   max-width: 1440px;
 }
+
+/* * {
+  outline: 1px solid red;
+} */
