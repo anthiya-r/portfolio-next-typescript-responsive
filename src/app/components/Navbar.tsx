@@ -40,13 +40,7 @@ const Navbar = () => {
                   Home
                 </a>
               </li>
-              {/* <li>
-                <a className="font-bold">
-                  {" "}
-                  <BiUser />
-                  About
-                </a>
-              </li> */}
+
               <li>
                 <a className="font-bold" onClick={() => navigate("/skills")}>
                   {" "}
@@ -85,27 +79,40 @@ const Navbar = () => {
           </div>
           <div className="navbar-desktop hidden lg:flex lg:pt-2 lg:font-bold cursor-pointer">
             <ul className="flex">
-              <li>
-                <a href="">Home</a>
+              <li className="transform transition-transform hover:scale-105">
+                <a> Home</a>
               </li>
 
-              <li>
+              <li className="transform transition-transform hover:scale-105">
                 <a onClick={() => navigate("/skills")}>Skills</a>
               </li>
-              <li>
+              <li className="transform transition-transform hover:scale-105">
                 <a href="">Projects</a>
               </li>
-              <li>
-                <a href="">Experience</a>
-              </li>
+              <div className="dropdown dropdown-bottom ">
+                <label tabIndex={0} className="cursor-pointer">
+                  Experience
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 cursor-pointer"
+                >
+                  <li>
+                    <a>Work</a>
+                  </li>
+                  <li>
+                    <a>Education</a>
+                  </li>
+                </ul>
+              </div>
 
-              <li className="text-center">
+              <li className="text-center transform transition-transform hover:scale-105">
                 <a href="">Contact</a>
               </li>
             </ul>
           </div>
           <div>
-            <h1 className=" text-2xl text-right font-bold cursor-pointer hover:text-red-500 lg:pr-24">
+            <h1 className=" text-2xl text-right font-bold cursor-pointer lg:pr-24">
               | a n t h i y a |
             </h1>
           </div>
