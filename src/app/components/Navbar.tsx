@@ -1,5 +1,10 @@
 "use client";
-import GoHome from "@react-icons/all-files/go/GoHome";
+import { GoHome } from "@react-icons/all-files/go/GoHome";
+import { BiUser } from "@react-icons/all-files/bi/BiUser";
+import { VscTools } from "@react-icons/all-files/vsc/VscTools";
+import { GiProgression } from "@react-icons/all-files/gi/GiProgression";
+import { TiContacts } from "@react-icons/all-files/ti/TiContacts";
+import { AiOutlineFundProjectionScreen } from "@react-icons/all-files/ai/AiOutlineFundProjectionScreen";
 
 const Navbar = () => {
   return (
@@ -30,28 +35,50 @@ const Navbar = () => {
               <li>
                 <a className="font-bold">
                   {" "}
-                  <img src={GoHome} alt="home-icon" />
+                  <GoHome />
                   Home
                 </a>
               </li>
               <li>
-                <a className="font-bold">About</a>
+                <a className="font-bold">
+                  {" "}
+                  <BiUser />
+                  About
+                </a>
               </li>
               <li>
-                <a className="font-bold">Skills</a>
+                <a className="font-bold">
+                  {" "}
+                  <VscTools />
+                  Skills
+                </a>
               </li>
               <li>
-                <a className="font-bold">Projects</a>
+                <a className="font-bold">
+                  <AiOutlineFundProjectionScreen /> Projects
+                </a>
               </li>
               <li>
-                <a className="font-bold">Experience</a>
-                <ul>
-                  <li>Work</li>
-                  <li>Education</li>
+                <a className="font-bold">
+                  {" "}
+                  <GiProgression />
+                  Experience
+                </a>
+                <ul className="cursor-pointer w-[80%] flex flex-col ">
+                  <li>
+                    {" "}
+                    <a href="#">Work</a>
+                  </li>
+                  <li>
+                    {" "}
+                    <a href="#">Education</a>
+                  </li>
                 </ul>
               </li>
               <li>
-                <a className="font-bold">Contact</a>
+                <a className="font-bold">
+                  <TiContacts /> Contact
+                </a>
               </li>
             </ul>
           </div>
