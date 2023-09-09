@@ -1,17 +1,18 @@
 "use client";
+import { useNavigate } from "react-router-dom";
 import { GoHome } from "@react-icons/all-files/go/GoHome";
-import { BiUser } from "@react-icons/all-files/bi/BiUser";
 import { VscTools } from "@react-icons/all-files/vsc/VscTools";
 import { GiProgression } from "@react-icons/all-files/gi/GiProgression";
 import { TiContacts } from "@react-icons/all-files/ti/TiContacts";
 import { AiOutlineFundProjectionScreen } from "@react-icons/all-files/ai/AiOutlineFundProjectionScreen";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <div className="navbar bg-base-100 w-[100%] text-black p-3">
-        <div className="navbar-start w-full flex items-start">
-          <div className="dropdown w-[20%]">
+      <div className="navbar bg-base-100 w-[100%] text-black p-3 shadow-md">
+        <div className="navbar-start w-full flex items-start ">
+          <div className="navbar-mobile dropdown w-[20%]">
             <label tabIndex={0} className="lg:hidden ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,24 +31,24 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
             >
               <li>
-                <a className="font-bold">
+                <a className="font-bold ">
                   {" "}
                   <GoHome />
                   Home
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a className="font-bold">
                   {" "}
                   <BiUser />
                   About
                 </a>
-              </li>
+              </li> */}
               <li>
-                <a className="font-bold">
+                <a className="font-bold" onClick={() => navigate("/skills")}>
                   {" "}
                   <VscTools />
                   Skills
@@ -82,37 +83,33 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+          <div className="navbar-desktop hidden lg:flex lg:pt-2 lg:font-bold cursor-pointer">
+            <ul className="flex">
+              <li>
+                <a href="">Home</a>
+              </li>
 
+              <li>
+                <a onClick={() => navigate("/skills")}>Skills</a>
+              </li>
+              <li>
+                <a href="">Projects</a>
+              </li>
+              <li>
+                <a href="">Experience</a>
+              </li>
+
+              <li className="text-center">
+                <a href="">Contact</a>
+              </li>
+            </ul>
+          </div>
           <div>
-            <h1 className=" text-2xl text-right font-bold cursor-pointer hover:text-red-500">
+            <h1 className=" text-2xl text-right font-bold cursor-pointer hover:text-red-500 lg:pr-24">
               | a n t h i y a |
             </h1>
           </div>
         </div>
-
-        {/* <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li tabIndex={0}>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
-        </div> */}
       </div>
     </>
   );

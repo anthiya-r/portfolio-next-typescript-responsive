@@ -1,0 +1,26 @@
+@keyframes heroAnimation {
+  0% {
+    transform: translate(500%, 0%);
+  }
+  100% {
+  }
+}
+.hero-image {
+  animation: heroAnimation 1.5s ease 0s 1 normal none;
+}
+
+/* @keyframes grow {
+  from {
+    width: 10%;
+    height: 0px;
+  }
+
+  to {
+    width: 70%;
+    height: auto;
+  }
+}
+
+.hero-image {
+  animation: grow 2s linear; 
+} */
