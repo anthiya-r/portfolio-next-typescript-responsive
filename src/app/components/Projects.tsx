@@ -31,11 +31,11 @@ const Projects = () => {
                 <h1 className="font-bold text-lg">
                   {projects[currentProjectIndex].title}
                 </h1>
-                <h2 className="text-sm mb-3">
+                <h2 className="text-sm mb-3 ">
                   {projects[currentProjectIndex].description}
                 </h2>
                 <div className="flex w-full justify-between">
-                  <div className="flex text-left w-[55%] items-center">
+                  <div className="flex text-left w-[55%] gap-1 items-center">
                     {projects[currentProjectIndex].tags.map((tag, index) => (
                       <span key={index}>{tag}</span>
                     ))}
