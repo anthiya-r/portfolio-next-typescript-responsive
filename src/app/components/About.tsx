@@ -1,11 +1,11 @@
+import "../assets/style/animation.css";
 import Image from "next/image";
 import hero from "../assets/images/hero.png";
-import "../assets/style/animation.css";
 import { AiOutlineCloudDownload } from "@react-icons/all-files/ai/AiOutlineCloudDownload";
 
 const About = () => {
   return typeof window !== "undefined" ? (
-    <div className="about w-full">
+    <div className="about w-full" id="about">
       <div className="about-wrapper mt-12 flex flex-col justify-center items-center lg:flex-row lg:p-20 lg:gap-16">
         <div className="hero-image w-[70%] animate-heroAnimation transform transition-transform hover:scale-75 cursor-pointer lg:w-[50%]">
           <Image src={hero} alt="hero-image " />

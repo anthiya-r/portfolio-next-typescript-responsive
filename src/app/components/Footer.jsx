@@ -6,8 +6,11 @@ import { FiPhoneCall } from "@react-icons/all-files/fi/FiPhoneCall";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-4 pt-8  bg-black text-white ">
-      <h1 className="text-3xl font-bold">Let's stay in touch!</h1>
+    <footer
+      className="footer footer-center p-4 pt-8  bg-black text-white "
+      id="footer"
+    >
+      <h1 className="text-3xl font-bold">Let&apos;s stay in touch!</h1>
       <div className="contact-list flex w-[70%] lg:w-[35%]">
         <a
           href="https://github.com/anthiya-r?tab=repositories"

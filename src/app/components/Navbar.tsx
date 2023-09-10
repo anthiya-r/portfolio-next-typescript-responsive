@@ -1,5 +1,4 @@
 "use client";
-import { useNavigate } from "react-router-dom";
 import { GoHome } from "@react-icons/all-files/go/GoHome";
 import { VscTools } from "@react-icons/all-files/vsc/VscTools";
 import { GiProgression } from "@react-icons/all-files/gi/GiProgression";
@@ -7,7 +6,6 @@ import { TiContacts } from "@react-icons/all-files/ti/TiContacts";
 import { AiOutlineFundProjectionScreen } from "@react-icons/all-files/ai/AiOutlineFundProjectionScreen";
 
 const Navbar = () => {
-  const navigate = useNavigate();
   return (
     <>
       <div className="navbar bg-base-100 w-[100%] text-black p-3 shadow-md">
@@ -34,7 +32,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
             >
               <li>
-                <a className="font-bold ">
+                <a className="font-bold " href="#about">
                   {" "}
                   <GoHome />
                   Home
@@ -42,7 +40,7 @@ const Navbar = () => {
               </li>
 
               <li>
-                <a className="font-bold" onClick={() => navigate("/skills")}>
+                <a className="font-bold" href="#skills-section">
                   {" "}
                   <VscTools />
                   Skills
@@ -71,7 +69,7 @@ const Navbar = () => {
                 </ul>
               </li>
               <li>
-                <a className="font-bold">
+                <a className="font-bold" href="#footer">
                   <TiContacts /> Contact
                 </a>
               </li>
@@ -84,7 +82,7 @@ const Navbar = () => {
               </li>
 
               <li className="transform transition-transform hover:scale-105">
-                <a onClick={() => navigate("/skills")}>Skills</a>
+                <a>Skills</a>
               </li>
               <li className="transform transition-transform hover:scale-105">
                 <a href="">Projects</a>
