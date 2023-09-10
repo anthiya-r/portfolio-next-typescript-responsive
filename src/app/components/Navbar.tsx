@@ -47,7 +47,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a className="font-bold">
+                <a className="font-bold" href="#projects">
                   <AiOutlineFundProjectionScreen /> Projects
                 </a>
               </li>
@@ -78,14 +78,14 @@ const Navbar = () => {
           <div className="navbar-desktop hidden lg:flex lg:pt-2 lg:font-bold cursor-pointer">
             <ul className="flex">
               <li className="transform transition-transform hover:scale-105">
-                <a> Home</a>
+                <a href="#about"> Home</a>
               </li>
 
               <li className="transform transition-transform hover:scale-105">
-                <a>Skills</a>
+                <a href="#skills-section">Skills</a>
               </li>
               <li className="transform transition-transform hover:scale-105">
-                <a href="">Projects</a>
+                <a href="#projects">Projects</a>
               </li>
               <div className="dropdown dropdown-bottom ">
                 <label tabIndex={0} className="cursor-pointer">
@@ -105,7 +105,7 @@ const Navbar = () => {
               </div>
 
               <li className="text-center transform transition-transform hover:scale-105">
-                <a href="">Contact</a>
+                <a href="#footer">Contact</a>
               </li>
             </ul>
           </div>
